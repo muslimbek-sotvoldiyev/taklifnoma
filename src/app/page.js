@@ -199,7 +199,7 @@ export default function WeddingInvitation() {
                     <Heart className="text-teal-600 fill-teal-600" size={14} />
                   </motion.div>
                 </div>
-                <div className="text-right text-gray-500 text-sm font-medium">Hurmat bilan, Muslimbek</div>
+                <div className="text-right text-gray-500 text-sm font-medium">Hurmat bilan, Hamkoringiz</div>
               </motion.div>
             </CardContent>
           </Card>
