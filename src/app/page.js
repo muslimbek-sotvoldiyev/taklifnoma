@@ -1,6 +1,6 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, CalendarHeart, Heart, Mail, Gift, Send } from "lucide-react"
+import { MapPin, CalendarHeart, Heart, Send } from "lucide-react"
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 
@@ -82,12 +82,13 @@ export default function WeddingInvitation() {
                 transition={{ delay: 0.5, duration: 0.5 }}
                 className="text-center mb-6"
               >
-                <h1 className="text-3xl font-serif font-bold text-teal-700 mb-2">TO'Y TAKLIFNOMASI</h1>
+                <h1 className="text-3xl font-serif font-bold text-teal-700 mb-2">WEDDING INVITATION</h1>
                 <div className="h-[2px] w-28 mx-auto bg-gradient-to-r from-transparent via-teal-300 to-transparent mb-3"></div>
                 <p className="text-gray-700 text-sm leading-relaxed">
-                  Hurmatli va qadrli hamkor,
+                  Dear and respected colleague,
                   <br />
-                  Sizni yaqin insonlarimizdan birining to'y marosimiga taklif qilishdan mamnunmiz.
+                  We are pleased to invite you and your team to the wedding celebration of one of our close family
+                  members.
                 </p>
               </motion.div>
 
@@ -102,30 +103,18 @@ export default function WeddingInvitation() {
                     <CalendarHeart className="text-teal-600" size={20} />
                   </motion.div>
                   <div>
-                    <div className="text-xs text-teal-600 font-medium">Sanasi:</div>
-                    <div className="text-base text-gray-800 font-semibold">2025-yil 15–16-may</div>
+                    <div className="text-xs text-teal-600 font-medium">Date:</div>
+                    <div className="text-base text-gray-800 font-semibold">May 15-16, 2025</div>
                   </div>
                 </div>
-
-                {/* <div className="flex items-center gap-3 mb-4">
-                  <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="bg-white p-2.5 rounded-full shadow-sm">
-                    <Gift className="text-teal-600" size={20} />
-                  </motion.div>
-                  <div>
-                    <div className="text-xs text-teal-600 font-medium">Sovg'a:</div>
-                    <div className="text-base text-gray-800 font-semibold">Pul sovg'asi afzal</div>
-                  </div>
-                </div> */}
 
                 <div className="flex items-center gap-3">
                   <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="bg-white p-2.5 rounded-full shadow-sm">
                     <MapPin className="text-teal-600" size={20} />
                   </motion.div>
                   <div>
-                    <div className="text-xs text-teal-600 font-medium">Manzil:</div>
-                    <div className="text-base text-gray-800 font-semibold">
-                      O'zbekiston, Farg'ona viloyati, Qo'qon shahri
-                    </div>
+                    <div className="text-xs text-teal-600 font-medium">Location:</div>
+                    <div className="text-base text-gray-800 font-semibold">Uzbekistan, Fergana Region, Kokand City</div>
                   </div>
                 </div>
               </motion.div>
@@ -136,8 +125,32 @@ export default function WeddingInvitation() {
                 transition={{ delay: 0.9, duration: 0.5 }}
                 className="text-center text-sm text-gray-600 mb-5 bg-white p-3.5 rounded-xl border border-teal-100"
               >
-                Sizni mehmonimiz sifatida ko'rishdan juda mamnun bo'lamiz. Iloji bo'lsa, ishtirokingiz haqida oldindan
-                xabar bering.
+                We would be delighted to have you as our guest. Please let us know in advance if you will be able to
+                attend.
+              </motion.div>
+
+              {/* Contact Section for Mobile */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.0, duration: 0.5 }}
+                className="bg-white p-4 rounded-xl border border-teal-100 mb-5"
+              >
+                <h3 className="text-center text-teal-700 font-medium mb-3">Contact</h3>
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-2">
+                    <Send className="text-teal-600 h-4 w-4" />
+                    <motion.a
+                      href="https://t.me/Muslimbek_sotvoldiyev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-teal-700 hover:text-teal-500 transition-colors text-sm"
+                      whileHover={{ scale: 1.03 }}
+                    >
+                      @muslimbek
+                    </motion.a>
+                  </div>
+                </div>
               </motion.div>
 
               <motion.div
@@ -169,7 +182,7 @@ export default function WeddingInvitation() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Joylashuvni ko'rish
+                  View Location
                 </motion.a>
               </motion.div>
 
@@ -182,24 +195,36 @@ export default function WeddingInvitation() {
                 <div className="flex items-center gap-1.5">
                   <motion.div
                     animate={{ y: [0, -3, 0] }}
-                    transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5, delay: 0.1 }}
+                    transition={{
+                      repeat: Number.POSITIVE_INFINITY,
+                      duration: 1.5,
+                      delay: 0.1,
+                    }}
                   >
                     <Heart className="text-teal-400 fill-teal-400" size={14} />
                   </motion.div>
                   <motion.div
                     animate={{ y: [0, -3, 0] }}
-                    transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5, delay: 0.3 }}
+                    transition={{
+                      repeat: Number.POSITIVE_INFINITY,
+                      duration: 1.5,
+                      delay: 0.3,
+                    }}
                   >
                     <Heart className="text-teal-500 fill-teal-500" size={16} />
                   </motion.div>
                   <motion.div
                     animate={{ y: [0, -3, 0] }}
-                    transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5, delay: 0.5 }}
+                    transition={{
+                      repeat: Number.POSITIVE_INFINITY,
+                      duration: 1.5,
+                      delay: 0.5,
+                    }}
                   >
                     <Heart className="text-teal-600 fill-teal-600" size={14} />
                   </motion.div>
                 </div>
-                <div className="text-right text-gray-500 text-sm font-medium">Hurmat bilan, Hamkoringiz</div>
+                <div className="text-right text-gray-500 text-sm font-medium">Sincerely, Muslimbek</div>
               </motion.div>
             </CardContent>
           </Card>
@@ -289,12 +314,13 @@ export default function WeddingInvitation() {
                 transition={{ delay: 0.5, duration: 0.5 }}
                 className="text-center mb-8"
               >
-                <h1 className="text-4xl font-serif font-bold text-teal-700 mb-3">TO'Y TAKLIFNOMASI</h1>
+                <h1 className="text-4xl font-serif font-bold text-teal-700 mb-3">WEDDING INVITATION</h1>
                 <div className="h-[2px] w-40 mx-auto bg-gradient-to-r from-transparent via-teal-300 to-transparent mb-4"></div>
                 <p className="text-gray-700 leading-relaxed">
-                  Hurmatli va qadrli hamkor,
+                  Dear and respected colleague,
                   <br />
-                  Sizni yaqin insonlarimizdan birining to'y marosimiga taklif qilishdan mamnunmiz.
+                  We are pleased to invite you and your team to the wedding celebration of one of our close family
+                  members.
                 </p>
               </motion.div>
 
@@ -309,30 +335,18 @@ export default function WeddingInvitation() {
                     <CalendarHeart className="text-teal-600" size={24} />
                   </motion.div>
                   <div>
-                    <div className="text-sm text-teal-600 font-medium">Sanasi:</div>
-                    <div className="text-xl text-gray-800 font-semibold">2025-yil 15–16-may</div>
+                    <div className="text-sm text-teal-600 font-medium">Date:</div>
+                    <div className="text-xl text-gray-800 font-semibold">May 15-16, 2025</div>
                   </div>
                 </div>
-
-                {/* <div className="flex items-center gap-4 mb-5">
-                  <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="bg-white p-3 rounded-full shadow-sm">
-                    <Gift className="text-teal-600" size={24} />
-                  </motion.div>
-                  <div>
-                    <div className="text-sm text-teal-600 font-medium">Sovg'a:</div>
-                    <div className="text-xl text-gray-800 font-semibold">Pul sovg'asi afzal</div>
-                  </div>
-                </div> */}
 
                 <div className="flex items-center gap-4">
                   <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="bg-white p-3 rounded-full shadow-sm">
                     <MapPin className="text-teal-600" size={24} />
                   </motion.div>
                   <div>
-                    <div className="text-sm text-teal-600 font-medium">Manzil:</div>
-                    <div className="text-xl text-gray-800 font-semibold">
-                      O'zbekiston, Farg'ona viloyati, Qo'qon shahri
-                    </div>
+                    <div className="text-sm text-teal-600 font-medium">Location:</div>
+                    <div className="text-xl text-gray-800 font-semibold">Uzbekistan, Fergana Region, Kokand City</div>
                   </div>
                 </div>
               </motion.div>
@@ -343,8 +357,8 @@ export default function WeddingInvitation() {
                 transition={{ delay: 0.9, duration: 0.5 }}
                 className="text-center text-gray-600 mb-8 bg-white p-5 rounded-xl border border-teal-100"
               >
-                Sizni mehmonimiz sifatida ko'rishdan juda mamnun bo'lamiz. Iloji bo'lsa, ishtirokingiz haqida oldindan
-                xabar bering.
+                We would be delighted to have you as our guest. Please let us know in advance if you will be able to
+                attend.
               </motion.div>
 
               <motion.div
@@ -356,24 +370,36 @@ export default function WeddingInvitation() {
                 <div className="flex items-center gap-2">
                   <motion.div
                     animate={{ y: [0, -3, 0] }}
-                    transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5, delay: 0.1 }}
+                    transition={{
+                      repeat: Number.POSITIVE_INFINITY,
+                      duration: 1.5,
+                      delay: 0.1,
+                    }}
                   >
                     <Heart className="text-teal-400 fill-teal-400" size={16} />
                   </motion.div>
                   <motion.div
                     animate={{ y: [0, -3, 0] }}
-                    transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5, delay: 0.3 }}
+                    transition={{
+                      repeat: Number.POSITIVE_INFINITY,
+                      duration: 1.5,
+                      delay: 0.3,
+                    }}
                   >
                     <Heart className="text-teal-500 fill-teal-500" size={20} />
                   </motion.div>
                   <motion.div
                     animate={{ y: [0, -3, 0] }}
-                    transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5, delay: 0.5 }}
+                    transition={{
+                      repeat: Number.POSITIVE_INFINITY,
+                      duration: 1.5,
+                      delay: 0.5,
+                    }}
                   >
                     <Heart className="text-teal-600 fill-teal-600" size={16} />
                   </motion.div>
                 </div>
-                <div className="text-right text-gray-500 font-medium">Hurmat bilan, Hamkoringiz</div>
+                <div className="text-right text-gray-500 font-medium">Sincerely, Muslimbek</div>
               </motion.div>
             </CardContent>
           </Card>
@@ -389,7 +415,7 @@ export default function WeddingInvitation() {
           {/* Map Section */}
           <Card className="w-full shadow-xl rounded-3xl overflow-hidden border-0 bg-white/90 backdrop-blur-sm">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-serif font-bold text-teal-700 mb-4">Joylashuv</h2>
+              <h2 className="text-2xl font-serif font-bold text-teal-700 mb-4">Location</h2>
 
               <div className="relative overflow-hidden rounded-xl mb-5">
                 <iframe
@@ -410,7 +436,7 @@ export default function WeddingInvitation() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Joylashuvni ko'rish
+                  View Location
                 </motion.a>
               </div>
             </CardContent>
@@ -425,15 +451,15 @@ export default function WeddingInvitation() {
             >
               <Card className="h-full shadow-xl rounded-3xl overflow-hidden border-0 bg-white/90 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h2 className="text-2xl font-serif font-bold text-teal-700 mb-4">To'y Dasturi</h2>
+                  <h2 className="text-2xl font-serif font-bold text-teal-700 mb-4">Wedding Program</h2>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <div className="bg-teal-50 p-2 rounded-full mt-1">
                         <CalendarHeart className="text-teal-600 h-5 w-5" />
                       </div>
                       <div>
-                        <p className="font-medium text-gray-800">15-may, 2025</p>
-                        <p className="text-gray-600">Nikoh marosimi</p>
+                        <p className="font-medium text-gray-800">May 15, 2025</p>
+                        <p className="text-gray-600">Wedding Ceremony</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -441,11 +467,10 @@ export default function WeddingInvitation() {
                         <CalendarHeart className="text-teal-600 h-5 w-5" />
                       </div>
                       <div>
-                        <p className="font-medium text-gray-800">16-may, 2025</p>
-                        <p className="text-gray-600">To'y marosimi</p>
+                        <p className="font-medium text-gray-800">May 16, 2025</p>
+                        <p className="text-gray-600">Wedding Celebration</p>
                       </div>
                     </li>
-                   
                   </ul>
                 </CardContent>
               </Card>
@@ -458,7 +483,7 @@ export default function WeddingInvitation() {
             >
               <Card className="h-full shadow-xl rounded-3xl overflow-hidden border-0 bg-white/90 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h2 className="text-2xl font-serif font-bold text-teal-700 mb-4">Bog'lanish</h2>
+                  <h2 className="text-2xl font-serif font-bold text-teal-700 mb-4">Contact</h2>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <div className="bg-teal-50 p-2 rounded-full">
@@ -467,20 +492,19 @@ export default function WeddingInvitation() {
                       <div>
                         <p className="text-sm text-teal-600">Telegram:</p>
                         <motion.a
-                          href="https://t.me/Muslimbek_sotvoldiyev"
+                          href="https://t.me/muslimbek"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-medium text-teal-700 hover:text-teal-500 transition-colors"
                           whileHover={{ scale: 1.03 }}
                         >
-                          @Muslimbek_sotvoldiyev
+                          @muslimbek
                         </motion.a>
                       </div>
                     </div>
-                   
                     <div className="mt-6 pt-4 border-t border-teal-100">
                       <p className="text-gray-600">
-                        Iltimos, to'y marosimiga kelish yoki kelmasligingiz haqida oldindan xabar bering.
+                        Please let us know in advance if you will be able to attend the wedding.
                       </p>
                     </div>
                   </div>
