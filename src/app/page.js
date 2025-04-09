@@ -147,7 +147,7 @@ export default function WeddingInvitation() {
                       className="text-teal-700 hover:text-teal-500 transition-colors text-sm"
                       whileHover={{ scale: 1.03 }}
                     >
-                      @muslimbek
+                      @Muslimbek_sotvoldiyev
                     </motion.a>
                   </div>
                 </div>
@@ -224,7 +224,7 @@ export default function WeddingInvitation() {
                     <Heart className="text-teal-600 fill-teal-600" size={14} />
                   </motion.div>
                 </div>
-                <div className="text-right text-gray-500 text-sm font-medium">Sincerely, Muslimbek</div>
+                <div className="text-right text-gray-500 text-sm font-medium">Sincerely, your partner</div>
               </motion.div>
             </CardContent>
           </Card>
@@ -399,7 +399,7 @@ export default function WeddingInvitation() {
                     <Heart className="text-teal-600 fill-teal-600" size={16} />
                   </motion.div>
                 </div>
-                <div className="text-right text-gray-500 font-medium">Sincerely, Muslimbek</div>
+                <div className="text-right text-gray-500 font-medium">Sincerely, your partner</div>
               </motion.div>
             </CardContent>
           </Card>
@@ -492,13 +492,13 @@ export default function WeddingInvitation() {
                       <div>
                         <p className="text-sm text-teal-600">Telegram:</p>
                         <motion.a
-                          href="https://t.me/muslimbek"
+                          href="https://t.me/Muslimbek_sotvoldiyev"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-medium text-teal-700 hover:text-teal-500 transition-colors"
                           whileHover={{ scale: 1.03 }}
                         >
-                          @muslimbek
+                          @Muslimbek_sotvoldiyev
                         </motion.a>
                       </div>
                     </div>
